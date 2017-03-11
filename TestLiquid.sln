@@ -1,0 +1,93 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLiquid_Console", "TestLiquid_Console\TestLiquid_Console.csproj", "{AF0340B8-D818-4880-A415-2ABC23F427E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLiquid", "TestLiquid\TestLiquid.csproj", "{42530724-C50D-48AF-B8DF-407F5525CFE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{35475093-B505-47A2-85C1-44F243EC10F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotLiquid.ViewEngine", "DotLiquid.ViewEngine\DotLiquid.ViewEngine.csproj", "{51339331-DF16-4B34-99E1-93CE10206483}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotLiquid", "DotLiquid\DotLiquid.csproj", "{CB9372CD-9C1D-47AB-92D8-702D4D68324F}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "http://testliquid.dev:8080", "http://testliquid.dev:8080", "{EC9CBB49-A30E-491E-BDCC-87429E3AE3C8}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{CB9372CD-9C1D-47AB-92D8-702D4D68324F}|DotLiquid.dll;{51339331-DF16-4B34-99E1-93CE10206483}|DotLiquid.ViewEngine.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/testliquid.dev_8080"
+		Debug.AspNetCompiler.PhysicalPath = "TestLiquid\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\testliquid.dev_8080\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/testliquid.dev_8080"
+		Release.AspNetCompiler.PhysicalPath = "TestLiquid\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\testliquid.dev_8080\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "TestLiquid\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotLiquid.Extends", "DotLiquid.Extends\DotLiquid.Extends.csproj", "{91CA89F3-E705-43D8-ACD3-F6EA140DA375}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CI|Any CPU = CI|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF0340B8-D818-4880-A415-2ABC23F427E0}.CI|Any CPU.ActiveCfg = Release|Any CPU
+		{AF0340B8-D818-4880-A415-2ABC23F427E0}.CI|Any CPU.Build.0 = Release|Any CPU
+		{AF0340B8-D818-4880-A415-2ABC23F427E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF0340B8-D818-4880-A415-2ABC23F427E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF0340B8-D818-4880-A415-2ABC23F427E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF0340B8-D818-4880-A415-2ABC23F427E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42530724-C50D-48AF-B8DF-407F5525CFE0}.CI|Any CPU.ActiveCfg = Release|Any CPU
+		{42530724-C50D-48AF-B8DF-407F5525CFE0}.CI|Any CPU.Build.0 = Release|Any CPU
+		{42530724-C50D-48AF-B8DF-407F5525CFE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42530724-C50D-48AF-B8DF-407F5525CFE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42530724-C50D-48AF-B8DF-407F5525CFE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42530724-C50D-48AF-B8DF-407F5525CFE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35475093-B505-47A2-85C1-44F243EC10F6}.CI|Any CPU.ActiveCfg = Release|Any CPU
+		{35475093-B505-47A2-85C1-44F243EC10F6}.CI|Any CPU.Build.0 = Release|Any CPU
+		{35475093-B505-47A2-85C1-44F243EC10F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35475093-B505-47A2-85C1-44F243EC10F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35475093-B505-47A2-85C1-44F243EC10F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35475093-B505-47A2-85C1-44F243EC10F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51339331-DF16-4B34-99E1-93CE10206483}.CI|Any CPU.ActiveCfg = Release|Any CPU
+		{51339331-DF16-4B34-99E1-93CE10206483}.CI|Any CPU.Build.0 = Release|Any CPU
+		{51339331-DF16-4B34-99E1-93CE10206483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51339331-DF16-4B34-99E1-93CE10206483}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51339331-DF16-4B34-99E1-93CE10206483}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51339331-DF16-4B34-99E1-93CE10206483}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB9372CD-9C1D-47AB-92D8-702D4D68324F}.CI|Any CPU.ActiveCfg = Release|Any CPU
+		{CB9372CD-9C1D-47AB-92D8-702D4D68324F}.CI|Any CPU.Build.0 = Release|Any CPU
+		{CB9372CD-9C1D-47AB-92D8-702D4D68324F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB9372CD-9C1D-47AB-92D8-702D4D68324F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB9372CD-9C1D-47AB-92D8-702D4D68324F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB9372CD-9C1D-47AB-92D8-702D4D68324F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC9CBB49-A30E-491E-BDCC-87429E3AE3C8}.CI|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC9CBB49-A30E-491E-BDCC-87429E3AE3C8}.CI|Any CPU.Build.0 = Debug|Any CPU
+		{EC9CBB49-A30E-491E-BDCC-87429E3AE3C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC9CBB49-A30E-491E-BDCC-87429E3AE3C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC9CBB49-A30E-491E-BDCC-87429E3AE3C8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC9CBB49-A30E-491E-BDCC-87429E3AE3C8}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{91CA89F3-E705-43D8-ACD3-F6EA140DA375}.CI|Any CPU.ActiveCfg = Release|Any CPU
+		{91CA89F3-E705-43D8-ACD3-F6EA140DA375}.CI|Any CPU.Build.0 = Release|Any CPU
+		{91CA89F3-E705-43D8-ACD3-F6EA140DA375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91CA89F3-E705-43D8-ACD3-F6EA140DA375}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91CA89F3-E705-43D8-ACD3-F6EA140DA375}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91CA89F3-E705-43D8-ACD3-F6EA140DA375}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

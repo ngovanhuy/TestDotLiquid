@@ -1,0 +1,13 @@
+﻿<h1>{{ products | size }}</h1>
+
+<ul>
+    {% for item in products %}
+    <li>{{ item.name | upcase  }} - {{ item.alias | upcase }}</li>
+    {% endfor -%}
+</ul>
+
+<ul>
+    {% for item in products %}
+    <li>{{ item.name }} - {{ item.alias }}</li>
+    {% endfor -%}
+</ul>

@@ -1,0 +1,7 @@
+﻿Lấy 10 sản phẩm đầu tiên.<br/>
+Customer: {{ customer }}
+<ul>
+    {% for item in products %}
+    <li>{{ item.name }} - {{ item.alias }}</li>
+    {% endfor -%}
+</ul>

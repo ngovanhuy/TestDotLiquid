@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{35475093-B505-47A2-85C1-44F243EC10F6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Services</RootNamespace>
+    <AssemblyName>Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Jil, Version=2.15.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Jil.2.15.0\lib\net45\Jil.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sigil, Version=4.7.0.0, Culture=neutral, PublicKeyToken=2d06c3494341c8ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sigil.4.7.0\lib\net45\Sigil.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\BlogPost.cs" />
+    <Compile Include="Domain\Blog.cs" />
+    <Compile Include="Domain\Collection.cs" />
+    <Compile Include="Domain\CollectionRule.cs" />
+    <Compile Include="Domain\Link.cs" />
+    <Compile Include="Domain\Linklist.cs" />
+    <Compile Include="Domain\MediaFile.cs" />
+    <Compile Include="Domain\Product.cs" />
+    <Compile Include="Domain\ScriptTag.cs" />
+    <Compile Include="Domain\StaticPage.cs" />
+    <Compile Include="Domain\Store.cs" />
+    <Compile Include="Domain\Theme.cs" />
+    <Compile Include="Domain\ThemeAsset.cs" />
+    <Compile Include="Filter\BlogFilter.cs" />
+    <Compile Include="Filter\BlogPostFilter.cs" />
+    <Compile Include="Filter\CollectionFilter.cs" />
+    <Compile Include="Filter\PageFilter.cs" />
+    <Compile Include="Filter\PaginateFilter.cs" />
+    <Compile Include="Filter\ProductFilter.cs" />
+    <Compile Include="Filter\ScriptTagFilter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\BlogPostService.cs" />
+    <Compile Include="Repository\BlogService.cs" />
+    <Compile Include="Repository\CollectionService.cs" />
+    <Compile Include="Repository\LinkedListService.cs" />
+    <Compile Include="Repository\PageService.cs" />
+    <Compile Include="Repository\ScriptTagService.cs" />
+    <Compile Include="Repository\SettingService.cs" />
+    <Compile Include="Repository\StoreService.cs" />
+    <Compile Include="Repository\ThemeAssetService.cs" />
+    <Compile Include="Response\BlogPostResponse.cs" />
+    <Compile Include="Response\BlogPostsResponse.cs" />
+    <Compile Include="Response\BlogResponse.cs" />
+    <Compile Include="Response\BlogsResponse.cs" />
+    <Compile Include="Response\CollectionResponse.cs" />
+    <Compile Include="Response\CollectionsResponse.cs" />
+    <Compile Include="Response\FilterCountResponse.cs" />
+    <Compile Include="Response\LinklistResponse.cs" />
+    <Compile Include="Response\LinklistsResponse.cs" />
+    <Compile Include="Response\ScriptTagResponse.cs" />
+    <Compile Include="Response\ScriptTagsResponse.cs" />
+    <Compile Include="Response\StaticPageResponse.cs" />
+    <Compile Include="Response\StaticPagesResponse.cs" />
+    <Compile Include="Response\StoreResponse.cs" />
+    <Compile Include="Response\ThemeAssetResponse.cs" />
+    <Compile Include="Response\ThemeAssetsResponse.cs" />
+    <Compile Include="Response\ProductsCountResponse.cs" />
+    <Compile Include="Response\ProductsResponse.cs" />
+    <Compile Include="Repository\BaseService.cs" />
+    <Compile Include="Repository\ProductService.cs" />
+    <Compile Include="Repository\ThemeService.cs" />
+    <Compile Include="Response\ThemeResponse.cs" />
+    <Compile Include="Response\ThemesResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

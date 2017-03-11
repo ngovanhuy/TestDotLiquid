@@ -1,0 +1,13 @@
+﻿<p>{{ user.name }} has to do:</p>
+<ul>
+    {% for item in user.tasks -%}
+    <li>{{ item.name }}</li>
+    {% endfor -%}
+</ul>
+
+
+<ul>
+    {% for item in products %}
+    <li>{{ item.name }} - {{ item.alias }}</li>
+    {% endfor -%}
+</ul>
