@@ -62,6 +62,7 @@
     <Compile Include="Models\CollectionModel.cs" />
     <Compile Include="Models\CollectionsModel.cs" />
     <Compile Include="Models\ConfigurationModel.cs" />
+    <Compile Include="Models\ImageModel.cs" />
     <Compile Include="Models\LinkListModel.cs" />
     <Compile Include="Models\LinkListsModel.cs" />
     <Compile Include="Models\LinkModel.cs" />

@@ -68,6 +68,7 @@
     <Compile Include="Domain\Linklist.cs" />
     <Compile Include="Domain\MediaFile.cs" />
     <Compile Include="Domain\Product.cs" />
+    <Compile Include="Domain\ProductImage.cs" />
     <Compile Include="Domain\ScriptTag.cs" />
     <Compile Include="Domain\StaticPage.cs" />
     <Compile Include="Domain\Store.cs" />

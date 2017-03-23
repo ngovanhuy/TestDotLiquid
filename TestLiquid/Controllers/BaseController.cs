@@ -1,5 +1,4 @@
 ﻿using System.Web.Mvc;
-using DotLiquid.Extends;
 using DotLiquid.Extends.Util;
 using DotLiquid.Extends.Models;
 using DotLiquid.ViewEngine;

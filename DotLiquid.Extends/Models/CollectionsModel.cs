@@ -25,8 +25,16 @@ namespace DotLiquid.Extends.Models
                 var collections = collectionService.Filter(collectionFilter);
                 var collectionsModel = Mapper.Map<List<CollectionModel>>(collections);
                 _loadedModel.Add("collections", collectionsModel);
+
+                foreach (var collectionModel in collectionsModel)
+                {
+                    string collectionAliasKey = string.Format("collections-{0}", collectionModel.Alias);
+                    _loadedModel.Add(collectionAliasKey, collectionModel);
+                }
+
                 return collectionsModel.GetEnumerator();
             }
+
             return ((List<CollectionModel>)_loadedModel["collections"]).GetEnumerator();
         }
 
@@ -45,13 +53,14 @@ namespace DotLiquid.Extends.Models
             var collection = new Collection();
             var collectionModel = new CollectionModel();
 
+            string collectionAliasKey = string.Format("collections-{0}", alias);
             if (!string.IsNullOrEmpty(alias))
             {
-                if (!_loadedModel.ContainsKey("collections"))
+                if (_loadedModel.ContainsKey(collectionAliasKey))
                 {
-                    var collections = (List<CollectionModel>)_loadedModel["collections"];
+                    var collections = (List<CollectionModel>)_loadedModel[collectionAliasKey];
                     collectionModel = collections.Find(a => a.Alias.Equals(alias));
-                    _loadedModel.Add(string.Format("collections-{0}", alias), collectionModel);
+                    _loadedModel.Add(collectionAliasKey, collectionModel);
                 }
                 else
                 {
@@ -59,7 +68,7 @@ namespace DotLiquid.Extends.Models
                     if (collection != null)
                     {
                         collectionModel = Mapper.Map<CollectionModel>(collection);
-                        _loadedModel.Add(string.Format("collections-{0}", alias), collectionModel);
+                        _loadedModel.Add(collectionAliasKey, collectionModel);
                     }
                 }
                 return collectionModel;

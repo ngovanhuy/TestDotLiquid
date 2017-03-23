@@ -10,7 +10,8 @@ namespace TestLiquid.App_Start
         {
             Mapper.Initialize(cfg =>
             {
-                cfg.CreateMap<Product, ProductModel>();
+                cfg.CreateMap<Product, ProductModel>().ForMember(x => x.FeaturedImage, opt => opt.MapFrom(p => p.Image));
+                cfg.CreateMap<ProductImage, ImageModel>();
                 cfg.CreateMap<Blog, BlogModel>();
                 cfg.CreateMap<BlogPost, ArticleModel>();
                 cfg.CreateMap<Collection, CollectionModel>();

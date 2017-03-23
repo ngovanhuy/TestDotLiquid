@@ -26,22 +26,19 @@ namespace DotLiquid.Extends.Models
 
         public IEnumerator GetEnumerator()
         {
-            if (!_loadedModel.ContainsKey("all_products"))
+            var productFilter = new ProductFilter
             {
-                var productFilter = new ProductFilter
-                {
-                    Page = 1,
-                    Limit = 20
-                };
+                Page = 1,
+                Limit = 20
+            };
 
-                if (collectionModel != null && collectionModel.Id != CollectionModel.ALL_PRODUCTS_COLLECTION_ID)
-                    productFilter.CollectionId = collectionModel.Id;
-                var products = productService.Filter(productFilter);
-                var productModels = Mapper.Map<List<ProductModel>>(products);
-                _loadedModel.Add("all_products", productModels);
-                return productModels.GetEnumerator();
-            }
-            return ((List<ProductModel>)_loadedModel["all_products"]).GetEnumerator();
+            if (collectionModel != null && collectionModel.Id != CollectionModel.ALL_PRODUCTS_COLLECTION_ID)
+                productFilter.CollectionId = collectionModel.Id;
+
+            var products = productService.Filter(productFilter);
+            var productModels = Mapper.Map<List<ProductModel>>(products);
+
+            return productModels.GetEnumerator();
         }
 
         public virtual int Count
@@ -56,6 +53,7 @@ namespace DotLiquid.Extends.Models
 
                     if (collectionModel.Id != CollectionModel.ALL_PRODUCTS_COLLECTION_ID)
                         productFilter.CollectionId = collectionModel.Id;
+
                     var products = productService.FilterCount(productFilter);
                     _loadedModel.Add("productsCount", products);
                 }
